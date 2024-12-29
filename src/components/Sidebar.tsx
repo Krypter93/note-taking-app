@@ -1,4 +1,3 @@
-import React from 'react'
 import { GiNotebook } from "react-icons/gi";
 
 export default function Sidebar() {
@@ -8,7 +7,7 @@ export default function Sidebar() {
 
       <GiNotebook className='text-white mt-2 mx-auto font-bold text-9xl'/>
 
-      <button className='p-2 mt-10 mx-auto bg-gray-50 w-2/3 rounded'> 
+      <button className='p-2 mt-10 mx-auto bg-gray-50 w-2/3 rounded hover:transform hover:scale-105 transition-all delay-75'> 
         <p className='text-xl'> + Create New Note</p>
       </button>
 
