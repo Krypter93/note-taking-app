@@ -1,9 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import AddModalSliceReducer from "./addModalSlice";
+import AddNoteSliceReducer from "./addNoteSlice";
+import noteContentReducer from "./noteContent";
+import noteColorReducer from "./noteColorSlice";
 
 export const store = configureStore({
     reducer: {
-        addModal: AddModalSliceReducer
+        addModal: AddModalSliceReducer,
+        notes: AddNoteSliceReducer,
+        noteContent: noteContentReducer,
+        noteColor: noteColorReducer
     }
 })
 
