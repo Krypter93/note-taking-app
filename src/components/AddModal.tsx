@@ -45,6 +45,7 @@ export default function AddModal() {
     dispatch(newNote(note))
     dispatch(clearText())
     dispatch(clearNoteColor())
+    dispatch(toggleAddModal())
   }
 
   return (
