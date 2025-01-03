@@ -15,9 +15,15 @@ const addNoteSlice = createSlice({
         newNote: (state: NoteType[], action) => {
             state.push(action.payload)
             localStorage.setItem("notes", JSON.stringify([...state]))        
-        }
+        },
+        
+        deleteNote: ((state: NoteType[], action) => {
+            const filteredNotes = state.filter(note => note.id !== action.payload.id)
+            localStorage.setItem("notes", JSON.stringify(filteredNotes))
+            return filteredNotes
+        })
     }
 })
 
-export const { newNote } = addNoteSlice.actions
+export const { newNote, deleteNote } = addNoteSlice.actions
 export default addNoteSlice.reducer
