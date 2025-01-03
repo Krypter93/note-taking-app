@@ -19,7 +19,7 @@ export default function Sidebar() {
 
       <GiNotebook className='text-white mt-3 mx-auto font-bold text-9xl'/>
 
-      <button className='p-2 mt-12 mx-auto bg-gray-50 w-2/3 rounded hover:transform hover:scale-105 transition-all delay-75' onClick={toggleModal}> 
+      <button className='p-2 mt-12 mx-auto bg-gray-50 w-2/3 rounded-full hover:transform hover:scale-105 transition-all delay-75' onClick={toggleModal}> 
         <p className='text-xl'> + Create New Note</p>
       </button>
     </div>
