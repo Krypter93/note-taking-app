@@ -9,7 +9,7 @@ export const store = configureStore({
         addModal: AddModalSliceReducer,
         notes: AddNoteSliceReducer,
         noteContent: noteContentReducer,
-        noteColor: noteColorReducer
+        noteColor: noteColorReducer,
     }
 })
 
