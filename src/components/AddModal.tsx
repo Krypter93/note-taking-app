@@ -49,12 +49,12 @@ export default function AddModal() {
   }
 
   return (
-    <div className='flex flex-col w-[550px] h-80 bg-violet-800 absolute top-[30%] left-[45%] rounded  text-white z-10'>
-      <IoClose className="mt-3 ml-[93%] text-2xl cursor-pointer" onClick={handleCloseModal}/>
-      <p className="p-1 text-center text-lg">Add your new note</p>
-      <textarea name="note" cols={10} rows={10} className="w-4/5 h-32 mx-auto rounded text-black p-2 m-2 outline-none" onChange={handleNoteContent} value={noteContentState}></textarea>
+    <div className='flex flex-col md:w-[550px] md:h-80 md:bg-violet-800 md:absolute md:top-[30%] md:left-[45%] rounded  text-white md:z-10 min-[360px]: bg-violet-800 z-30 absolute w-[90%] h-96 top-[28%] left-[5%]'>
+      <IoClose className="md:mt-3 md:ml-[93%] text-2xl cursor-pointer min-[360px]: mt-8 ml-[90%]" onClick={handleCloseModal}/>
+      <p className="p-1 text-center text-lg min-[360px]: mt-2">Add your new note</p>
+      <textarea name="note" cols={10} rows={10} className="w-4/5 h-32 mx-auto rounded text-black p-2 m-2 outline-none min-[360px]: mt-5" onChange={handleNoteContent} value={noteContentState}></textarea>
 
-      <select className="m-1 w-fit mx-auto outline-none text-black" value={noteColor} onChange={handleNoteColor}>
+      <select className="m-1 w-fit mx-auto outline-none text-black min-[360px]:mt-3" value={noteColor} onChange={handleNoteColor}>
         <option selected>Pick your note color</option>
         <option className="text-yellow-400" value="bg-yellow-400">{'\u{1F7E1}'} Yellow</option>
         <option className="text-green-900" value="bg-green-900">{'\u{1F7E2}'} Green</option>
@@ -65,9 +65,9 @@ export default function AddModal() {
         <option className="text-amber-900" value="bg-amber-900">{'\u{1F7E4}'} Brown</option>
       </select>
 
-      <div className="flex flex-row justify-evenly gap-x-24 bg-yellow">
-        <button className="pt-2 pb-2 pr-5 pl-5 mt-5 bg-green-800 w-fit rounded outline-none" onClick={handleSaveNote}>Save</button>
-        <button className="pt-2 pb-2 pr-5 pl-5 mt-5 bg-red-700 rounded outline-none" onClick={handleCloseModal}>Close</button>
+      <div className="flex flex-row justify-evenly gap-x-24 bg-yellow md:mt-0 min-[360px]:mt-2">
+        <button className="md:pt-2 pb-2 pr-5 pl-5 mt-5 bg-green-800 w-fit rounded outline-none" onClick={handleSaveNote}>Save</button>
+        <button className="md:pt-2 pb-2 pr-5 pl-5 mt-5 bg-red-700 rounded outline-none" onClick={handleCloseModal}>Close</button>
       </div>
     </div>
   )
