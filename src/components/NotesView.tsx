@@ -37,7 +37,7 @@ export default function NotesView() {
     
   return (
      <>
-     <div className=" flex flex-row flex-wrap justify-center bg-violet-200 w-3/4 h-fit absolute top-[0%] left-[25%] p-10 gap-10">
+     <div className=" flex flex-row flex-wrap justify-center bg-violet-200 w-3/4 h-screen absolute top-[0%] left-[25%] p-10 gap-10 overflow-auto ">
       {notes.length > 0 && notes.map((note: NoteType ) =>(
           <div className= {`${note.color} w-[300px] h-[240px] rounded rounded-br-[50px] break-words whitespace-normal overflow-y-auto brightness-110`} key={note.id}>
             <div className={`p-0 m-0 w-full h-8 relative top-0 ${note.color} brightness-50`}></div>
