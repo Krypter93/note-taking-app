@@ -14,6 +14,7 @@ export default function AddModal() {
 
   const handleCloseModal = () => {
     dispatch(toggleAddModal())
+    dispatch(clearText())
   }
 
   const handleNoteContent = (event: ChangeEvent<HTMLTextAreaElement>) => {
@@ -49,12 +50,12 @@ export default function AddModal() {
   }
 
   return (
-    <div className='flex flex-col md:w-[550px] md:h-80 md:bg-violet-800 md:absolute md:top-[30%] md:left-[45%] rounded  text-white md:z-10 min-[360px]: bg-violet-800 z-30 absolute w-[90%] h-96 top-[28%] left-[5%]'>
+    <div className='flex flex-col md:w-[550px] md:h-96 md:bg-violet-800 md:absolute md:top-[30%] md:left-[45%] rounded  text-white md:z-10 min-[360px]: bg-violet-800 z-30 absolute w-[90%] h-96 top-[28%] left-[5%]'>
       <IoClose className="md:mt-3 md:ml-[93%] text-2xl cursor-pointer min-[360px]: mt-8 ml-[90%]" onClick={handleCloseModal}/>
       <p className="p-1 text-center text-lg min-[360px]: mt-2">Add your new note</p>
-      <textarea name="note" cols={10} rows={10} className="w-4/5 h-32 mx-auto rounded text-black p-2 m-2 outline-none min-[360px]: mt-5" onChange={handleNoteContent} value={noteContentState}></textarea>
+      <textarea name="note" cols={10} rows={10} className="w-4/5 h-32 md:mx-auto rounded text-black p-2 m-2 outline-none min-[360px]: mt-5 mx-auto" onChange={handleNoteContent} value={noteContentState}></textarea>
 
-      <select className="m-1 w-fit mx-auto outline-none text-black min-[360px]:mt-3" value={noteColor} onChange={handleNoteColor}>
+      <select className="md:m-5 w-fit md:mx-auto outline-none text-black min-[360px]:mt-3 mx-auto" value={noteColor} onChange={handleNoteColor}>
         <option selected>Pick your note color</option>
         <option className="text-yellow-400" value="bg-yellow-400">{'\u{1F7E1}'} Yellow</option>
         <option className="text-green-900" value="bg-green-900">{'\u{1F7E2}'} Green</option>
