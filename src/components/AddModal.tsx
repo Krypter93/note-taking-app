@@ -29,7 +29,7 @@ export default function AddModal() {
     const note: NoteType = {
       id: Date.now(),
       content: noteContentState,
-      createdAt: new Date().toLocaleDateString("en-US", {year: "numeric", month: "2-digit", day: "2-digit"}),
+      createdAt: new Date(),
       color: noteColor
     } 
 

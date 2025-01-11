@@ -9,7 +9,7 @@ Note-Taking App is a simple and intuitive application designed to help you organ
 ## Features
 
 - Create, edit, and delete notes.
-- Real-time synchronization (if applicable).
+- Sort notes by date.
 
 ---
 
